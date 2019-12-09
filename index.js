@@ -15,6 +15,7 @@ const speedometer = require('speedometer')
 
 const TCPPool = require('./lib/tcp-pool') // browser exclude
 const Torrent = require('./lib/torrent')
+const MagnetServer = require('./lib/magnet-server')
 const VERSION = require('./package.json').version
 
 /**
@@ -199,6 +200,9 @@ class WebTorrent extends EventEmitter {
     return this.add(torrentId, opts, ontorrent)
   }
 
+  magnetServer(opts = {}) {
+    return MagnetServer(this, opts);
+  }
   /**
    * Start downloading a new torrent. Aliased as `client.download`.
    * @param {string|Buffer|Object} torrentId
