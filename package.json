@@ -43,6 +43,7 @@
     "debug": "^4.1.0",
     "end-of-stream": "^1.1.0",
     "escape-html": "^1.0.3",
+    "express": "^4.17.1",
     "fs-chunk-store": "^2.0.0",
     "http-node": "github:feross/http-node#webtorrent",
     "immediate-chunk-store": "^2.0.0",
